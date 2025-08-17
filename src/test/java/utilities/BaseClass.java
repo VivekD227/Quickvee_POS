@@ -1,4 +1,4 @@
-package utility;
+package utilities;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -40,3 +40,4 @@ public class BaseClass {
 		service.stop();
 	}
 }
+
