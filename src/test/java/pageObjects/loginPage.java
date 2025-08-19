@@ -11,12 +11,13 @@ import utilities.waitHelper;
 public class loginPage extends waitHelper {
 
 	public AndroidDriver driver;
+
 	public loginPage(AndroidDriver driver) {
 		super(driver);
-		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+
 	}
-		
+
 	@AndroidFindBy(xpath = "//android.widget.ImageView[@content-desc='Quickvee POS (Dev)']")
 	private WebElement quickveeLogo;
 
@@ -75,90 +76,103 @@ public class loginPage extends waitHelper {
 		visiblityOfElement(quickveeLogo);
 		return quickveeLogo.isDisplayed();
 	}
-	
+
 	public boolean loginTextDisplay() {
 		visiblityOfElement(loginText);
 		return loginText.isDisplayed();
 	}
-	
+
 	public boolean storeTextDisplay() {
 		visiblityOfElement(storeNameText);
 		return storeNameText.isDisplayed();
 	}
-	
+
 	public boolean emailTextDisplay() {
 		visiblityOfElement(emailText);
 		return emailText.isDisplayed();
 	}
-	
+
 	public boolean passwordText() {
 		visiblityOfElement(passwordText);
 		return passwordText.isDisplayed();
 	}
-	
-	public void storeFieldClicked() {
+
+	public void storeFieldText(String storeName) {
 		elementClick(storeField);
-		storeField.click();
+		storeField.sendKeys(storeName);
 	}
-	
-	public void emailFieldClicked() {
+
+	public String getStoreField() {
+		return storeField.getAttribute("value");
+	}
+
+	public void emailFieldText(String email) {
 		elementClick(emailField);
-		emailField.click();
+		emailField.sendKeys(email);
 	}
-	
-	public void passwordField() {
+
+	public String getEmailField() {
+		return emailField.getAttribute("value");
+
+	}
+
+	public void passwordFieldText(String pass) {
 		elementClick(passwordField);
-		passwordField.click();
+		passwordField.sendKeys(pass);
 	}
-	
+
+	public String getPasswordField() {
+		return passwordField.getAttribute("value");
+	}
+
 	public void storeToolTipClicked() {
 		elementClick(storeToolTip);
 		storeToolTip.click();
 	}
-	
+
 	public void showPasswordBtnClicked() {
 		elementClick(showPasswordBtn);
 		showPasswordBtn.click();
 	}
-	
+
 	public void forgotPassBtnClicked() {
 		elementClick(forgotPassBtn);
 		forgotPassBtn.click();
 	}
-	
+
 	public boolean manadatoryTextDisplay() {
 		visiblityOfElement(manadatoryText);
 		return manadatoryText.isDisplayed();
 	}
-	
+
 	public void logiBtnClicked() {
 		elementClick(loginBtn);
 		loginBtn.click();
 	}
-	
+
 	public boolean invalidErrorMsgDisplay() {
 		visiblityOfElement(invalidErrorMsg);
 		return invalidErrorMsg.isDisplayed();
 	}
-	
+
 	public void invalidOKBtnClicked() {
 		elementClick(invalidOKBtn);
 		invalidOKBtn.click();
 	}
-	
+
 	public boolean errorStoreInputDisplay() {
 		visiblityOfElement(errorStoreInput);
 		return errorStoreInput.isDisplayed();
 	}
-	
+
 	public boolean errorEmailInputDisplay() {
 		visiblityOfElement(errorEmailInput);
 		return errorEmailInput.isDisplayed();
 	}
-	
+
 	public boolean errorPasswordInputDisplay() {
 		visiblityOfElement(errorPasswordInput);
 		return errorPasswordInput.isDisplayed();
 	}
-	
+
 }
