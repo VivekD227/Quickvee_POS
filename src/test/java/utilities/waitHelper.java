@@ -24,4 +24,6 @@ public class waitHelper {
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 
 	}
+	
+	
 }

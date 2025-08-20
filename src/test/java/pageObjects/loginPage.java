@@ -45,13 +45,16 @@ public class loginPage extends waitHelper {
 	@AndroidFindBy(xpath = "//android.widget.ImageButton[@content-desc='Please use your registered store credentials.']")
 	private WebElement storeToolTip;
 
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Please use your registered store credentials.\"]")
+	private WebElement toolTipText;
+	
 	@AndroidFindBy(xpath = "//android.widget.ImageButton[@content-desc=\"Show password\"]")
 	private WebElement showPasswordBtn;
 
 	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/tvMerchantForgotPassword")
 	private WebElement forgotPassBtn;
 
-	@AndroidFindBy(className = "android.widget.TextView")
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Fields Marked With * Are Required.\"]")
 	private WebElement manadatoryText;
 
 	@AndroidFindBy(className = "android.widget.Button")
@@ -63,116 +66,148 @@ public class loginPage extends waitHelper {
 	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/buttonOk")
 	private WebElement invalidOKBtn;
 
-	@AndroidFindBy(xpath = "//android.widget.TextView[@resource-id=\"com.apprication.quickveemanager.dev:id/textinput_error\" and @text=\"Enter Store Name\"]")
-	private WebElement errorStoreInput;
+	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/textinput_error")
+	private WebElement errorInvalidText;
+	
+	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/progressMessage")
+	private WebElement progressBar;
 
-	@AndroidFindBy(xpath = "//android.widget.TextView[@resource-id=\"com.apprication.quickveemanager.dev:id/textinput_error\" and @text=\"Enter valid email address\"]")
-	private WebElement errorEmailInput;
+	 // Logo
+    public boolean quickveeLogoDisplay() {
+        visiblityOfElement(quickveeLogo);
+        return quickveeLogo.isDisplayed();
+    }
 
-	@AndroidFindBy(xpath = "//android.widget.TextView[@resource-id=\"com.apprication.quickveemanager.dev:id/textinput_error\" and @text=\"Enter password\"]")
-	private WebElement errorPasswordInput;
+    
+    // Labels - Get Text
+    public String getLoginText() {
+        visiblityOfElement(loginText);
+        return loginText.getText();
+    }
 
-	public boolean quickveeLogoDisplay() {
-		visiblityOfElement(quickveeLogo);
-		return quickveeLogo.isDisplayed();
-	}
+    public String getStoreText() {
+        visiblityOfElement(storeNameText);
+        return storeNameText.getText();
+    }
 
-	public boolean loginTextDisplay() {
-		visiblityOfElement(loginText);
-		return loginText.isDisplayed();
-	}
+    public String getEmailText() {
+        visiblityOfElement(emailText);
+        return emailText.getText();
+    }
 
-	public boolean storeTextDisplay() {
-		visiblityOfElement(storeNameText);
-		return storeNameText.isDisplayed();
-	}
+    public String getPasswordText() {
+        visiblityOfElement(passwordText);
+        return passwordText.getText();
+    }
 
-	public boolean emailTextDisplay() {
-		visiblityOfElement(emailText);
-		return emailText.isDisplayed();
-	}
+    public String getMandatoryText() {
+        visiblityOfElement(manadatoryText);
+        return manadatoryText.getText();
+    }
 
-	public boolean passwordText() {
-		visiblityOfElement(passwordText);
-		return passwordText.isDisplayed();
-	}
+    // Fields input
+    public void storeFieldText(String storeName) {
+        elementClick(storeField);
+        storeField.clear();
+        storeField.sendKeys(storeName);
+    }
 
-	public void storeFieldText(String storeName) {
-		elementClick(storeField);
-		storeField.sendKeys(storeName);
-	}
+    public String getStoreField() {
+        return storeField.getText();
+    }
 
-	public String getStoreField() {
-		return storeField.getAttribute("value");
-	}
+    public void emailFieldText(String email) {
+        elementClick(emailField);
+        emailField.clear();
+        emailField.sendKeys(email);
+    }
 
-	public void emailFieldText(String email) {
-		elementClick(emailField);
-		emailField.sendKeys(email);
-	}
+    public String getEmailField() {
+        return emailField.getText();
+    }
 
-	public String getEmailField() {
-		return emailField.getAttribute("value");
+    public String getToolTipText() {
+    	return toolTipText.getText();
+    }
+    
+    public boolean toolTipDisplay() {
+    	return toolTipText.isDisplayed();
+    }
+    public void passwordFieldText(String pass) {
+        elementClick(passwordField);
+        passwordField.clear();
+        passwordField.sendKeys(pass);
+    }
 
-	}
+    public String getPasswordField() {
+        return passwordField.getText();
+    }
 
-	public void passwordFieldText(String pass) {
-		elementClick(passwordField);
-		passwordField.sendKeys(pass);
-	}
+    // Buttons & Clicks
+    public void storeToolTipClicked() {
+        elementClick(storeToolTip);
+        storeToolTip.click();
+    }
+    public void storeFieldClick() {
+    	elementClick(storeField);
+    	storeField.click();
+    }
+    
+    public void forgotPassBtnClicked() {
+        elementClick(forgotPassBtn);
+        forgotPassBtn.click();
+    }
 
-	public String getPasswordField() {
-		return passwordField.getAttribute("value");
-	}
+    public void logiBtnClicked() {
+        elementClick(loginBtn);
+        loginBtn.click();
+    }
 
-	public void storeToolTipClicked() {
-		elementClick(storeToolTip);
-		storeToolTip.click();
-	}
+    public boolean isLoginBtnEnabled() {
+        return loginBtn.isEnabled();
+    }
 
-	public void showPasswordBtnClicked() {
-		elementClick(showPasswordBtn);
-		showPasswordBtn.click();
-	}
+    // Error handling
+    public boolean invalidErrorMsgDisplay() {
+        visiblityOfElement(invalidErrorMsg);
+        return invalidErrorMsg.isDisplayed();
+    }
 
-	public void forgotPassBtnClicked() {
-		elementClick(forgotPassBtn);
-		forgotPassBtn.click();
-	}
+    public void invalidOKBtnClicked() {
+        elementClick(invalidOKBtn);
+        invalidOKBtn.click();
+    }
 
-	public boolean manadatoryTextDisplay() {
-		visiblityOfElement(manadatoryText);
-		return manadatoryText.isDisplayed();
-	}
+    public boolean errorEmailInputDisplay() {
+        visiblityOfElement(errorInvalidText);
+        return errorInvalidText.isDisplayed();
+    }
 
-	public void logiBtnClicked() {
-		elementClick(loginBtn);
-		loginBtn.click();
-	}
-
-	public boolean invalidErrorMsgDisplay() {
-		visiblityOfElement(invalidErrorMsg);
-		return invalidErrorMsg.isDisplayed();
-	}
-
-	public void invalidOKBtnClicked() {
-		elementClick(invalidOKBtn);
-		invalidOKBtn.click();
-	}
-
-	public boolean errorStoreInputDisplay() {
-		visiblityOfElement(errorStoreInput);
-		return errorStoreInput.isDisplayed();
-	}
-
-	public boolean errorEmailInputDisplay() {
-		visiblityOfElement(errorEmailInput);
-		return errorEmailInput.isDisplayed();
-	}
-
-	public boolean errorPasswordInputDisplay() {
-		visiblityOfElement(errorPasswordInput);
-		return errorPasswordInput.isDisplayed();
-	}
-
+    public void clearAllFields() {
+        storeField.clear();
+        emailField.clear();
+        passwordField.clear();
+    }
+    
+    public boolean progressBarDisplay() {
+    	visiblityOfElement(progressBar);
+    	return progressBar.isDisplayed();
+    }
+    
+    public String progressBarText() {
+    	visiblityOfElement(progressBar);
+    	return progressBar.getText();
+    }
+    
+    public String storeFieldText() {
+    	return storeField.getText();
+    }
+    
+    public String emailFieldText() {
+    	return emailField.getText();
+    }
+    
+    public String passwordFieldText() {
+    	return passwordField.getText();
+    }
 }

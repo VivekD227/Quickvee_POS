@@ -1,25 +1,510 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="13" passed="10" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-15T02:48:30 GMT-07:00" name="Default suite" finished-at="2025-08-15T02:48:46 GMT-07:00" duration-ms="15979">
+  <suite started-at="2025-08-20T09:30:06 GMT-07:00" name="Default suite" finished-at="2025-08-20T09:32:05 GMT-07:00" duration-ms="118589">
     <groups>
     </groups>
-    <test started-at="2025-08-15T02:48:30 GMT-07:00" name="Default test" finished-at="2025-08-15T02:48:46 GMT-07:00" duration-ms="15979">
-      <class name="POS.POS_Practice">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:POS.POS_Practice@1165b38]" started-at="2025-08-15T02:48:30 GMT-07:00" name="SetUp" finished-at="2025-08-15T02:48:44 GMT-07:00" duration-ms="13866" status="PASS">
+    <test started-at="2025-08-20T09:30:06 GMT-07:00" name="Default test" finished-at="2025-08-20T09:32:05 GMT-07:00" duration-ms="118589">
+      <class name="testCases.testCases_Login">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:30:06 GMT-07:00" name="SetUp" finished-at="2025-08-20T09:30:13 GMT-07:00" duration-ms="6287" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method signature="PracticePos()[pri:0, instance:POS.POS_Practice@1165b38]" started-at="2025-08-15T02:48:44 GMT-07:00" name="PracticePos" finished-at="2025-08-15T02:48:46 GMT-07:00" duration-ms="2026" status="PASS">
+        <test-method is-config="true" signature="initPage()[pri:0, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:30:13 GMT-07:00" name="initPage" finished-at="2025-08-20T09:30:14 GMT-07:00" duration-ms="908" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PracticePos -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:POS.POS_Practice@1165b38]" started-at="2025-08-15T02:48:46 GMT-07:00" name="tearDown" finished-at="2025-08-15T02:48:46 GMT-07:00" duration-ms="11" status="PASS">
+        </test-method> <!-- initPage -->
+        <test-method signature="loginLogoTextDisplay()[pri:1, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:30:14 GMT-07:00" name="loginLogoTextDisplay" finished-at="2025-08-20T09:30:15 GMT-07:00" duration-ms="1932" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginLogoTextDisplay -->
+        <test-method is-config="true" signature="initPage()[pri:0, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:30:15 GMT-07:00" name="initPage" finished-at="2025-08-20T09:30:15 GMT-07:00" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPage -->
+        <test-method signature="blankData(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:30:15 GMT-07:00" name="blankData" data-provider="loginBlankData" finished-at="2025-08-20T09:30:22 GMT-07:00" duration-ms="6350" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- blankData -->
+        <test-method is-config="true" signature="initPage()[pri:0, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:30:22 GMT-07:00" name="initPage" finished-at="2025-08-20T09:30:22 GMT-07:00" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPage -->
+        <test-method signature="blankData(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:30:22 GMT-07:00" name="blankData" data-provider="loginBlankData" finished-at="2025-08-20T09:30:28 GMT-07:00" duration-ms="6059" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chain]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- blankData -->
+        <test-method is-config="true" signature="initPage()[pri:0, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:30:28 GMT-07:00" name="initPage" finished-at="2025-08-20T09:30:28 GMT-07:00" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPage -->
+        <test-method signature="blankData(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:30:28 GMT-07:00" name="blankData" data-provider="loginBlankData" finished-at="2025-08-20T09:30:35 GMT-07:00" duration-ms="6691" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[vivek.dubey521@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- blankData -->
+        <test-method is-config="true" signature="initPage()[pri:0, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:30:35 GMT-07:00" name="initPage" finished-at="2025-08-20T09:30:35 GMT-07:00" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPage -->
+        <test-method signature="blankData(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:30:35 GMT-07:00" name="blankData" data-provider="loginBlankData" finished-at="2025-08-20T09:30:41 GMT-07:00" duration-ms="6666" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Vivek@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- blankData -->
+        <test-method is-config="true" signature="initPage()[pri:0, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:30:41 GMT-07:00" name="initPage" finished-at="2025-08-20T09:30:42 GMT-07:00" duration-ms="318" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPage -->
+        <test-method signature="invalidEmailId(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:30:42 GMT-07:00" name="invalidEmailId" data-provider="invalidEmailData" finished-at="2025-08-20T09:30:50 GMT-07:00" duration-ms="8326" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chain]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[vivek.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Vivek@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidEmailId -->
+        <test-method is-config="true" signature="initPage()[pri:0, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:30:50 GMT-07:00" name="initPage" finished-at="2025-08-20T09:30:50 GMT-07:00" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPage -->
+        <test-method signature="invalidEmailId(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:30:50 GMT-07:00" name="invalidEmailId" data-provider="invalidEmailData" finished-at="2025-08-20T09:30:58 GMT-07:00" duration-ms="8333" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chain]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[vivek@gmail]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Vivek@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidEmailId -->
+        <test-method is-config="true" signature="initPage()[pri:0, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:30:58 GMT-07:00" name="initPage" finished-at="2025-08-20T09:30:58 GMT-07:00" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPage -->
+        <test-method signature="invalidEmailId(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:30:58 GMT-07:00" name="invalidEmailId" data-provider="invalidEmailData" finished-at="2025-08-20T09:31:06 GMT-07:00" duration-ms="8020" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chain,]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[vivek]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Vivek@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidEmailId -->
+        <test-method is-config="true" signature="initPage()[pri:0, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:31:06 GMT-07:00" name="initPage" finished-at="2025-08-20T09:31:07 GMT-07:00" duration-ms="131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPage -->
+        <test-method signature="validationLogin(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:31:07 GMT-07:00" name="validationLogin" data-provider="invalidMerchantDetails" finished-at="2025-08-20T09:31:20 GMT-07:00" duration-ms="13685" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chain]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[vivek.dubey521@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validationLogin -->
+        <test-method is-config="true" signature="initPage()[pri:0, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:31:20 GMT-07:00" name="initPage" finished-at="2025-08-20T09:31:20 GMT-07:00" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPage -->
+        <test-method signature="validationLogin(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:31:20 GMT-07:00" name="validationLogin" data-provider="invalidMerchantDetails" finished-at="2025-08-20T09:31:29 GMT-07:00" duration-ms="8657" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chaining]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[vivek.dubey521@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Vivek@123]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: Located by By.chained({AppiumBy.id: com.apprication.quickveemanager.dev:id/tietMerchantStoreName}) (tried for 8 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Located by By.chained({AppiumBy.id: com.apprication.quickveemanager.dev:id/tietMerchantStoreName}) (tried for 8 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at utilities.waitHelper.elementClick(waitHelper.java:24)
+at pageObjects.loginPage.storeFieldText(loginPage.java:109)
+at testCases.testCases_Login.validationLogin(testCases_Login.java:78)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({AppiumBy.id: com.apprication.quickveemanager.dev:id/tietMerchantStoreName})
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:74)
+at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$HK9WItSO.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 29 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@51b77cdf (tried for 1 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+... 38 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.id: com.apprication.quickveemanager.dev:id/tietMerchantStoreName})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: driver.version: RemoteWebDriver
+at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:54)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 40 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validationLogin -->
+        <test-method is-config="true" signature="initPage()[pri:0, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:31:29 GMT-07:00" name="initPage" finished-at="2025-08-20T09:31:29 GMT-07:00" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPage -->
+        <test-method signature="validationLogin(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:31:29 GMT-07:00" name="validationLogin" data-provider="invalidMerchantDetails" finished-at="2025-08-20T09:31:38 GMT-07:00" duration-ms="8690" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chain]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[vivek@yahoo.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Vivek@123]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: Located by By.chained({AppiumBy.id: com.apprication.quickveemanager.dev:id/tietMerchantStoreName}) (tried for 8 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Located by By.chained({AppiumBy.id: com.apprication.quickveemanager.dev:id/tietMerchantStoreName}) (tried for 8 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at utilities.waitHelper.elementClick(waitHelper.java:24)
+at pageObjects.loginPage.storeFieldText(loginPage.java:109)
+at testCases.testCases_Login.validationLogin(testCases_Login.java:78)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({AppiumBy.id: com.apprication.quickveemanager.dev:id/tietMerchantStoreName})
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:74)
+at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$HK9WItSO.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 29 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@22ad1bae (tried for 1 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+... 38 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.id: com.apprication.quickveemanager.dev:id/tietMerchantStoreName})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: driver.version: RemoteWebDriver
+at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:54)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 40 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validationLogin -->
+        <test-method is-config="true" signature="initPage()[pri:0, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:31:38 GMT-07:00" name="initPage" finished-at="2025-08-20T09:31:38 GMT-07:00" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPage -->
+        <test-method signature="otherText()[pri:5, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:31:38 GMT-07:00" name="otherText" finished-at="2025-08-20T09:31:47 GMT-07:00" duration-ms="9303" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherText -->
+        <test-method is-config="true" signature="initPage()[pri:0, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:31:47 GMT-07:00" name="initPage" finished-at="2025-08-20T09:31:47 GMT-07:00" duration-ms="149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPage -->
+        <test-method signature="validLogin(java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:31:47 GMT-07:00" name="validLogin" data-provider="validDataLogin" finished-at="2025-08-20T09:32:03 GMT-07:00" duration-ms="16134" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chain]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[vivek.dubey521@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Vivek@123]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Please wait... while we are set up the Database] but found [Please wait... while we set up the Database]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Please wait... while we are set up the Database] but found [Please wait... while we set up the Database]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at testCases.testCases_Login.validLogin(testCases_Login.java:136)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.testCases_Login@2f4948e4]" started-at="2025-08-20T09:32:03 GMT-07:00" name="tearDown" finished-at="2025-08-20T09:32:05 GMT-07:00" duration-ms="1623" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- POS.POS_Practice -->
+      </class> <!-- testCases.testCases_Login -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
