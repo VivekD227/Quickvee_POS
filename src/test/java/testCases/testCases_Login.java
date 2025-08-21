@@ -41,6 +41,7 @@ public class testCases_Login extends BaseClass {
 
 		loginpage.storeFieldText(storeName);
 		String sname = loginpage.getStoreField();
+		System.out.println("Store Name: " + sname);
 
 		loginpage.emailFieldText(Email);
 		String email = loginpage.getEmailField();
@@ -133,7 +134,7 @@ public class testCases_Login extends BaseClass {
 		
 		loginpage.logiBtnClicked();
 		Thread.sleep(8000);
-		Assert.assertEquals(loginpage.progressBarText(), "Please wait... while we are set up the Database");
+		Assert.assertEquals(loginpage.progressBarText(), "Please wait... while we set up the Database");
 		Assert.assertTrue(loginpage.progressBarDisplay(), "Progress bar is not displayed");
 	}
 }

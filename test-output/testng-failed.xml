@@ -6,7 +6,6 @@
       <class name="testCases.testCases_Login">
         <methods>
           <include name="initPage"/>
-          <include name="validationLogin" invocation-numbers="1 2"/>
           <include name="validLogin" invocation-numbers="0"/>
           <include name="SetUp"/>
           <include name="tearDown"/>

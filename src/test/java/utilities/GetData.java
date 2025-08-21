@@ -38,4 +38,14 @@ public class GetData {
 				{"chain", "vivek.dubey521@gmail.com", "Vivek@123"}
 			};
 	};
+	
+	@DataProvider(name = "forgotpasswordData")
+	public static Object[][] forgotData(){
+		return new Object[][] {
+			{""},
+			{"vvv"},
+			
+		};
+		
+	};
 }

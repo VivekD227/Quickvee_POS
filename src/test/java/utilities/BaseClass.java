@@ -9,13 +9,13 @@ import java.util.Collections;
 
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
-import pageObjects.loginPage;
 
 public class BaseClass {
 	
@@ -27,7 +27,7 @@ public class BaseClass {
 		
 		service = new AppiumServiceBuilder()
 				.withAppiumJS(new File(
-						"C:\\Users\\Priya Mishra\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+						"C:\\Users\\Appri\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
 				.withIPAddress("127.0.0.1").usingPort(4723).build();
 		service.start();
 
