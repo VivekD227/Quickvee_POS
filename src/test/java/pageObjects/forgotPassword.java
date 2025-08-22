@@ -87,7 +87,10 @@ public class forgotPassword extends waitHelper {
 	public void emailFieldText(String email) {
 		emailField.sendKeys(email);
 	}
-
+	
+	public void emailFieldClear() {
+		emailField.clear();
+	}
 	public void resetBtnClick() {
 		elementClick(resetBtn);
 		resetBtn.click();

@@ -39,13 +39,4 @@ public class GetData {
 			};
 	};
 	
-	@DataProvider(name = "forgotpasswordData")
-	public static Object[][] forgotData(){
-		return new Object[][] {
-			{""},
-			{"vvv"},
-			
-		};
-		
-	};
 }

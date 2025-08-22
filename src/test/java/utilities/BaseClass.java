@@ -1,11 +1,13 @@
 package utilities;
 
 import java.io.File;
-import java.net.MalformedURLException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.time.Duration;
 import java.util.Collections;
+import java.util.Properties;
 
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
@@ -21,9 +23,9 @@ public class BaseClass {
 	
 	public AndroidDriver driver;
 	public AppiumDriverLocalService service;
-
+	public Properties p;
 	@BeforeClass
-	public void SetUp() throws MalformedURLException, URISyntaxException {
+	public void SetUp() throws URISyntaxException, IOException {
 		
 		service = new AppiumServiceBuilder()
 				.withAppiumJS(new File(
@@ -39,6 +41,11 @@ public class BaseClass {
 		options.setNoReset(true);   // keep data, don’t uninstall
 
 		driver = new AndroidDriver(new URI("http://127.0.0.1:4723").toURL(), options);
+		
+		FileReader file = new FileReader("./src//test//resources//config.properties");
+		p = new Properties();
+		p.load(file);
+		
 	}
 	
 	
