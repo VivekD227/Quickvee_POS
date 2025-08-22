@@ -29,6 +29,12 @@ public class lockScreenPinPage extends waitHelper {
 
 	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/clQuickveeSupport")
 	private WebElement quickveeSupport;
+	
+	@AndroidFindBy(id ="com.apprication.quickveemanager.dev:id/tvQuickveeSupportNumber")
+	private WebElement callMeSupport;
+	
+	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/ivCall")
+	private WebElement callLogo;
 
 	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/buttonBack")
 	private WebElement cancelBtn;
@@ -68,6 +74,33 @@ public class lockScreenPinPage extends waitHelper {
 	
 	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/ivClose")
 	private WebElement closeBtn;
+	
+	public boolean quickveeLogoDisplay(){
+		visiblityOfElement(quickveeLogo);
+		return quickveeLogo.isDisplayed();
+	}
+	
+	public boolean timeDisplay() {
+		visiblityOfElement(timeText);
+		return timeText.isDisplayed();
+	}
+	
+	public boolean dateDisplay() {
+		visiblityOfElement(dateText);
+		return dateText.isDisplayed();
+	}
+	
+	public boolean quickveeSupportDisplay() {
+		return quickveeSupport.isDisplayed();
+	}
+	
+	public String callMeSupportText() {
+		return callMeSupport.getText();
+	}
+	
+	public boolean callLogoDisplay() {
+		return callLogo.isDisplayed();
+	}
 	
 	public void clickDigit(String digit) {
 		WebElement btn = driver.findElement(By.xpath(
