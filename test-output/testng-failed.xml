@@ -3,11 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="POS.POS_Practice">
+      <class name="testCases.testCases_forgotPassword">
         <methods>
-          <include name="PracticePos"/>
+          <include name="tearDown"/>
+          <include name="SetUp"/>
+          <include name="init"/>
+          <include name="validateResetEmailTitleAndBody"/>
         </methods>
-      </class> <!-- POS.POS_Practice -->
+      </class> <!-- testCases.testCases_forgotPassword -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
