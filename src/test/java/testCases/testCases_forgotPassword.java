@@ -20,7 +20,7 @@ public class testCases_forgotPassword extends BaseClass {
 		forgotpassword = new forgotPasswordPage(driver);
 	}
 
-//	@Test(priority = 1)
+	@Test(priority = 1)
 	public void checkText() {
 
 		loginpage.forgotPassBtnClicked();
@@ -36,7 +36,7 @@ public class testCases_forgotPassword extends BaseClass {
 		Assert.assertEquals(forgotpassword.resetBtnText(), "Reset");
 	}
 
-//	@Test(priority = 2)
+	@Test(priority = 2)
 	public void invalidEmail() throws InterruptedException {
 
 		forgotpassword.emailFieldText(p.getProperty("setInvalidEmail"));
@@ -46,7 +46,7 @@ public class testCases_forgotPassword extends BaseClass {
 		forgotpassword.emailFieldClear();
 	}
 
-//	@Test(priority = 3)
+	@Test(priority = 3)
 	public void blankData() throws InterruptedException {
 		forgotpassword.emailFieldText(p.getProperty("setBlankForgotPassword"));
 		Assert.assertFalse(forgotpassword.isResetBtnEnabled(), "Login button should be disabled for blank input");
@@ -55,7 +55,7 @@ public class testCases_forgotPassword extends BaseClass {
 
 	}
 
-//	@Test(priority = 4)
+	@Test(priority = 4)
 	public void unregisterEmail() {
 		forgotpassword.emailFieldText(p.getProperty("setUnregisterEmail"));
 		forgotpassword.resetBtnClick();
