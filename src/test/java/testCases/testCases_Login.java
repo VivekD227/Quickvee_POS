@@ -6,19 +6,19 @@ import utilities.GetData;
 
 import org.testng.Assert;
 
-import pageObjects.forgotPassword;
+import pageObjects.forgotPasswordPage;
 import pageObjects.loginPage;
 import utilities.BaseClass;
 
 public class testCases_Login extends BaseClass {
 
 	loginPage loginpage;
-	forgotPassword forgotpassword;
+	forgotPasswordPage forgotpassword;
 	
 	@BeforeMethod
 	public void initPage() {
 		loginpage = new loginPage(driver);
-		forgotpassword = new forgotPassword(driver);
+		forgotpassword = new forgotPasswordPage(driver);
 	}
 
 	@Test(priority = 1)

@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import pageObjects.forgotPassword;
+import pageObjects.forgotPasswordPage;
 import pageObjects.loginPage;
 import utilities.BaseClass;
 import utilities.GmailReader;
@@ -12,12 +12,12 @@ import utilities.GmailReader;
 public class testCases_forgotPassword extends BaseClass {
 
 	loginPage loginpage;
-	forgotPassword forgotpassword;
+	forgotPasswordPage forgotpassword;
 
 	@BeforeMethod
 	public void init() {
 		loginpage = new loginPage(driver);
-		forgotpassword = new forgotPassword(driver);
+		forgotpassword = new forgotPasswordPage(driver);
 	}
 
 //	@Test(priority = 1)
