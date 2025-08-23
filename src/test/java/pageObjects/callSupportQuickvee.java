@@ -37,9 +37,6 @@ public class callSupportQuickvee extends waitHelper{
 	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/ivClose")
 	private WebElement closeBtn;
 	
-	@AndroidFindBy(xpath = "//*[contains(@text,'Invalid Phone Number')]")
-	private WebElement invalidPhoneNumber;
-	
 	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/ivCall")
 	private WebElement callLogo;
 	
@@ -53,9 +50,18 @@ public class callSupportQuickvee extends waitHelper{
 		return phoneNumberText.getText();
 	}
 	
+	public boolean phoneTextDisplay() {
+		return phoneNumberText.isDisplayed();
+	}
+	
+	public boolean enterNumberDisplay() {
+		return enterNumberText.isDisplayed();
+	}
+	
+	
 	public String getEnterText() {
 		return enterNumberText.getText();
-	}
+	}	
 	
 	public void enterNumberText(String number) {
 		enterNumber.sendKeys(number);
@@ -66,10 +72,17 @@ public class callSupportQuickvee extends waitHelper{
 		callMeBtn.click();
 	}
 	
+	public boolean callMeBtnDisplay() {
+		return callMeBtn.isDisplayed();
+	}
+	
 	public String getsupportText() {
 		return supportText.getText();
 	}
 	
+	public boolean closeBtnDisplay() {
+		return closeBtn.isDisplayed();
+	}
 	public void closeBtnClick() {
 		elementClick(closeBtn);
 		closeBtn.click();
@@ -79,6 +92,9 @@ public class callSupportQuickvee extends waitHelper{
 		return callLogo.isDisplayed();
 	}
 	
+	public boolean getCallDisplay() {
+		return callText.isDisplayed();
+	}
 	public String getCallText() {
 		return callText.getText();
 	}
@@ -87,8 +103,4 @@ public class callSupportQuickvee extends waitHelper{
 		okayBtn.click();
 	}
 	
-	public void invalidPhoneNumberDisplay() {
-		visiblityOfElement(invalidPhoneNumber);
-		invalidPhoneNumber.isDisplayed();
-	}
 }

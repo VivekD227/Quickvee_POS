@@ -72,5 +72,18 @@ public class BaseClass {
 	    tap.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 	    driver.perform(Collections.singletonList(tap));
 	}
+	
+	public void relaunchApp() {
+	    String appPackage = "com.apprication.quickveemanager.dev";
+	    try {
+	        driver.terminateApp(appPackage);   // Close the app
+	        Thread.sleep(2000);                // Small wait before relaunch
+	        driver.activateApp(appPackage);    // Launch the app again
+	        System.out.println("App relaunched successfully.");
+	    } catch (Exception e) {
+	        System.out.println("Failed to relaunch app: " + e.getMessage());
+	    }
+	}
+
 }
 

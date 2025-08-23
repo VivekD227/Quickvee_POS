@@ -78,7 +78,9 @@ public class loginScreen extends waitHelper {
         return quickveeLogo.isDisplayed();
     }
 
-    
+    public boolean loginTextDisplay() {
+    	return loginText.isDisplayed();
+    }
     // Labels - Get Text
     public String getLoginText() {
         visiblityOfElement(loginText);

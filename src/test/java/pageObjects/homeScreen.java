@@ -1,6 +1,8 @@
 package pageObjects;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -8,8 +10,11 @@ import utilities.waitHelper;
 
 public class homeScreen extends waitHelper {
 
+	AndroidDriver driver;
 	public homeScreen(AndroidDriver driver) {
 		super(driver);
+		this.driver = driver;
+		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 
 	}
 
@@ -110,7 +115,15 @@ public class homeScreen extends waitHelper {
 		elementClick(callSupportBtn);
 		callSupportBtn.click();
 	}
-
+	
+	public boolean storeNameDisplay() {
+		return storeName.isDisplayed();
+	}
+	
+	public boolean employeeNameDisplay() {
+		return employeeName.isDisplayed();
+	}
+	
 	public String storeNameText() {
 		return storeName.getText();
 	}

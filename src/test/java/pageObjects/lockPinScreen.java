@@ -59,8 +59,6 @@ public class lockPinScreen extends waitHelper {
 	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/ivLogout")
 	private WebElement logoutBtn;
 
-	@AndroidFindBy(xpath = "//*[contains(@text,'Invalid Passcode')]")
-	private WebElement invalidPasscodeMsg;
 	
 	public boolean quickveeLogoDisplay(){
 		visiblityOfElement(quickveeLogo);
@@ -89,6 +87,10 @@ public class lockPinScreen extends waitHelper {
 		return quickveeSupport.isDisplayed();
 	}
 	
+	public void quickveeSupportClick() {
+		quickveeSupport.click();
+	}
+	
 	public String callMeSupportText() {
 		return callMeSupport.getText();
 	}
@@ -113,9 +115,21 @@ public class lockPinScreen extends waitHelper {
 		return passcodeInput.isDisplayed();
 	}
 	
+	public void refreshBtnClick() {
+		refreshBtn.click();
+	}
+	
+	public boolean logoutBtnDisplay() {
+		return logoutBtn.isDisplayed();
+	}
+	
 	public void logoutBtnClick() {
 		elementClick(logoutBtn);
 		logoutBtn.click();
+	}
+	
+	public boolean isRefreshDisplayed() {
+	    return refreshBtn.isDisplayed();
 	}
 	
 	public void clickDigit(String digit) {

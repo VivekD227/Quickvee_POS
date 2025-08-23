@@ -16,7 +16,7 @@ public class logoutScreen extends waitHelper{
 	public logoutScreen(AndroidDriver driver) {
 		super(driver);
 		this.driver = driver;
-		PageFactory.initElements(new AppiumFieldDecorator(driver), driver);
+		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 
 	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/ivIcon")
@@ -39,12 +39,23 @@ public class logoutScreen extends waitHelper{
 		return logoutText.getText();
 	}
 	
+	public boolean logoutTextDisplay() {
+		return logoutText.isDisplayed();
+	}
+	
+	public boolean noBtnDisplay() {
+		return noBtn.isDisplayed();
+	}
 	public void noBtnClick() {
 		noBtn.click();
 	}
 	
-	public void yesBtn() {
+	public void yesBtnClick() {
 		yesBtn.click();
+	}
+	
+	public boolean yesBtnDisplay() {
+		return yesBtn.isDisplayed();
 	}
 	
 }

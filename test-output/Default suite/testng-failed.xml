@@ -3,14 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.testCase_lockPinScreen">
+      <class name="testCases.testCases_LogoutScreen">
         <methods>
           <include name="tearDown"/>
           <include name="SetUp"/>
           <include name="init"/>
-          <include name="DisplayAndTextCheck"/>
+          <include name="pressYesButton"/>
+          <include name="CheckUI"/>
+          <include name="pressNoButton"/>
         </methods>
-      </class> <!-- testCases.testCase_lockPinScreen -->
+      </class> <!-- testCases.testCases_LogoutScreen -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
