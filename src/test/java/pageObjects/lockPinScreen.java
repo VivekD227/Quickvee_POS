@@ -7,11 +7,11 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import utilities.waitHelper;
 
-public class lockScreenPinPage extends waitHelper {
+public class lockPinScreen extends waitHelper {
 
 	AndroidDriver driver;
 
-	public lockScreenPinPage(AndroidDriver driver) {
+	public lockPinScreen(AndroidDriver driver) {
 		super(driver);
 	}
 

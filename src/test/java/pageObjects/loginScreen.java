@@ -8,11 +8,11 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utilities.waitHelper;
 
-public class loginPage extends waitHelper {
+public class loginScreen extends waitHelper {
 
 	public AndroidDriver driver;
 
-	public loginPage(AndroidDriver driver) {
+	public loginScreen(AndroidDriver driver) {
 		super(driver);
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 

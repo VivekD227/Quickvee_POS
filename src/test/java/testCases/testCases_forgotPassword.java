@@ -4,20 +4,20 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import pageObjects.forgotPasswordPage;
-import pageObjects.loginPage;
+import pageObjects.forgotPasswordScreen;
+import pageObjects.loginScreen;
 import utilities.BaseClass;
 import utilities.GmailReader;
 
 public class testCases_forgotPassword extends BaseClass {
 
-	loginPage loginpage;
-	forgotPasswordPage forgotpassword;
+	loginScreen loginpage;
+	forgotPasswordScreen forgotpassword;
 
 	@BeforeMethod
 	public void init() {
-		loginpage = new loginPage(driver);
-		forgotpassword = new forgotPasswordPage(driver);
+		loginpage = new loginScreen(driver);
+		forgotpassword = new forgotPasswordScreen(driver);
 	}
 
 	@Test(priority = 1)

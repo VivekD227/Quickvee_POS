@@ -9,10 +9,10 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 import utilities.waitHelper;
 	
-public class forgotPasswordPage extends waitHelper {
+public class forgotPasswordScreen extends waitHelper {
 	AndroidDriver driver;
-	loginPage loginpage;
-	public forgotPasswordPage(AndroidDriver driver) {
+	loginScreen loginpage;
+	public forgotPasswordScreen(AndroidDriver driver) {
 		super(driver);
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
