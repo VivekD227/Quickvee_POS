@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.testCases_forgotPassword">
+      <class name="testCases.testCase_lockPinScreen">
         <methods>
           <include name="tearDown"/>
           <include name="SetUp"/>
           <include name="init"/>
-          <include name="validateResetEmailTitleAndBody"/>
+          <include name="DisplayAndTextCheck"/>
         </methods>
-      </class> <!-- testCases.testCases_forgotPassword -->
+      </class> <!-- testCases.testCase_lockPinScreen -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

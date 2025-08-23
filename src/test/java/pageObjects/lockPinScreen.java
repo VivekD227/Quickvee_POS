@@ -1,7 +1,10 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -13,6 +16,8 @@ public class lockPinScreen extends waitHelper {
 
 	public lockPinScreen(AndroidDriver driver) {
 		super(driver);
+		this.driver = driver;
+		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 
 	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/tvBtnRefresh")
@@ -57,24 +62,6 @@ public class lockPinScreen extends waitHelper {
 	@AndroidFindBy(xpath = "//*[contains(@text,'Invalid Passcode')]")
 	private WebElement invalidPasscodeMsg;
 	
-	@AndroidFindBy(id ="com.apprication.quickveemanager.dev:id/tvEnterPhoneNumber")
-	private WebElement phoneNumberText;
-	
-	@AndroidFindBy(id= "com.apprication.quickveemanager.dev:id/tvEnterPhone")
-	private WebElement enterNumberText;
-	
-	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/etCallSupport")
-	private WebElement enterNumber;
-	
-	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/btnCallMe")
-	private WebElement callMeBtn;
-	
-	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/tvSupportPhoneNumber")
-	private WebElement supportText;
-	
-	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/ivClose")
-	private WebElement closeBtn;
-	
 	public boolean quickveeLogoDisplay(){
 		visiblityOfElement(quickveeLogo);
 		return quickveeLogo.isDisplayed();
@@ -85,9 +72,17 @@ public class lockPinScreen extends waitHelper {
 		return timeText.isDisplayed();
 	}
 	
+	public String getTime() {
+		return timeText.getText();
+	}
+	
 	public boolean dateDisplay() {
 		visiblityOfElement(dateText);
 		return dateText.isDisplayed();
+	}
+	
+	public String getDate() {
+		return dateText.getText();
 	}
 	
 	public boolean quickveeSupportDisplay() {
@@ -102,6 +97,27 @@ public class lockPinScreen extends waitHelper {
 		return callLogo.isDisplayed();
 	}
 	
+	public String enterPasscodeText() {
+		return enterPasscode.getText();
+	}
+	
+	public boolean passcodeDisplay() {
+		return passcodeDisplay.isDisplayed();
+	}
+	
+	public String passcodeHintText() {
+		return passcodeHint.getText();
+	}
+	
+	public boolean passcodeInput() {
+		return passcodeInput.isDisplayed();
+	}
+	
+	public void logoutBtnClick() {
+		elementClick(logoutBtn);
+		logoutBtn.click();
+	}
+	
 	public void clickDigit(String digit) {
 		WebElement btn = driver.findElement(By.xpath(
 				"//android.widget.TextView[@resource-id='com.apprication.quickveemanager.dev:id/tvNumber' and @text='"
@@ -113,5 +129,9 @@ public class lockPinScreen extends waitHelper {
 		for (char digit : passcode.toCharArray()) {
 			clickDigit(String.valueOf(digit));
 		}
+	}
+	
+	public void cancelBtnClick() {
+		cancelBtn.click();
 	}
 }

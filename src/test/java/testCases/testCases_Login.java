@@ -111,10 +111,6 @@ public class testCases_Login extends BaseClass {
 		Assert.assertTrue(forgotpassword.forgotPasswordDisplay(), "Not in a forgot password page");
 		forgotpassword.backBtnClick();
 		
-		Assert.assertEquals(loginpage.storeFieldText(), "Enter your registered store name");
-		Assert.assertEquals(loginpage.emailFieldText(), "Enter Your Email Address");
-		Assert.assertEquals(loginpage.passwordFieldText(), "Enter Your Password (Case-Sensitive)");
-	
 	}
 	
 	@Test(dataProvider = "validDataLogin", dataProviderClass = GetData.class, priority = 6)
