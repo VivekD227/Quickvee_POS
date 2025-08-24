@@ -67,10 +67,15 @@ public class testCases_QuickveeCallSupport extends BaseClass{
 
 		Assert.assertTrue(callsupport.callLogoDisplay(), "call support logo is not display");
 		Assert.assertTrue(callsupport.getCallDisplay(), "call text is not display");
-		String successCall = "Quickvee Support will be\ncontacting you soon.";
-							  
-		Assert.assertEquals(callsupport.getCallText(), successCall);
 		
+		String expected = "Quickvee Support will be contacting you soon.";
+		String actual   = callsupport.getCallText();
+
+		// Normalize spaces/newlines
+		expected = expected.replaceAll("\\s+", " ").trim();
+		actual   = actual.replaceAll("\\s+", " ").trim();
+
+		Assert.assertEquals(actual, expected, "Message text mismatch!");
 		callsupport.okayBtnClick();
 		Assert.assertTrue(lockscreen.passcodeDisplay(), "We are not in a lock Screen page");
 

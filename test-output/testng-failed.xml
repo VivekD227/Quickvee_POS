@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.testCases_LogoutScreen">
+      <class name="testCases.testCases_QuickveeCallSupport">
         <methods>
+          <include name="invalidNumber"/>
           <include name="tearDown"/>
           <include name="SetUp"/>
+          <include name="validNumber"/>
           <include name="init"/>
-          <include name="pressYesButton"/>
-          <include name="CheckUI"/>
-          <include name="pressNoButton"/>
+          <include name="checkUI"/>
         </methods>
-      </class> <!-- testCases.testCases_LogoutScreen -->
+      </class> <!-- testCases.testCases_QuickveeCallSupport -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

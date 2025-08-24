@@ -2,10 +2,10 @@ package pageObjects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utilities.waitHelper;
 
 public class homeScreen extends waitHelper {
@@ -27,7 +27,7 @@ public class homeScreen extends waitHelper {
 	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/tvEmployeeName")
 	private WebElement employeeName;
 
-	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/ivMenu")
+	@AndroidFindBy(xpath = "//android.widget.ImageView[@resource-id=\"com.apprication.quickveemanager.dev:id/ivMenu\"]")
 	private WebElement menuBtn;
 
 	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/lockscreen")
@@ -78,7 +78,7 @@ public class homeScreen extends waitHelper {
 	@AndroidFindBy(xpath = "//android.widget.TextView[@resource-id=\"com.apprication.quickveemanager.dev:id/tvRegisterLabel\" and @text=\"Customers\"]")
 	private WebElement customerText;
 
-	@AndroidFindBy(xpath = "//andro	id.widget.TextView[@resource-id=\"com.apprication.quickveemanager.dev:id/tvRegisterLabel\" and @text=\"Attendence\"]")
+	@AndroidFindBy(xpath = "//android.widget.TextView[@resource-id=\"com.apprication.quickveemanager.dev:id/tvRegisterLabel\" and @text=\"Attendance\"]")
 	private WebElement attendenceText;
 
 	@AndroidFindBy(xpath = "//android.widget.TextView[@resource-id=\"com.apprication.quickveemanager.dev:id/tvRegisterLabel\" and @text=\"Station Settings\"]")
@@ -112,8 +112,14 @@ public class homeScreen extends waitHelper {
 	private WebElement moreLogo;
 
 	public void callSupportBtnClick() {
-		elementClick(callSupportBtn);
 		callSupportBtn.click();
+	}
+	
+	public String callSupportBtnText() {
+		return callSupportBtn.getText();
+	}
+	public boolean callSupportBtnDisplay() {
+		return callSupportBtn.isDisplayed();
 	}
 	
 	public boolean storeNameDisplay() {
@@ -133,19 +139,48 @@ public class homeScreen extends waitHelper {
 	}
 
 	public void menuBtnClick() {
-		elementClick(menuBtn);
 		menuBtn.click();
+		
 	}
 
 	public void menuLockScreenBtnClick() {
 		elementClick(menuLockScreenBtn);
 		menuLockScreenBtn.click();
 	}
+	
+	public boolean menuBtnDisplay() {
+		return menuBtn.isDisplayed();
+	}
+	
+	public boolean menulockScreenDisplay() {
+		return menuLockScreenBtn.isDisplayed();
+	}
+	
+	public boolean menuSaleSummaryDisplay() {
+		return menuSaleSummaryBtn.isDisplayed();
+	}
+	
+	public boolean menuEndOfDayDisplay() {
+		return menuEndOfDayBtn.isDisplayed();
+	}
+	
+	public String menulockScreenText() {
+		return menuLockScreenBtn.getText();
+	}
+	
+	public String menuSaleSummaryText() {
+		return menuSaleSummaryBtn.getText();
+	}
+	
+	public String menuEndOFDayText() {
+		return menuEndOfDayBtn.getText();
+	}
 
 	public void menuSaleSummaryBtnClick() {
 		elementClick(menuSaleSummaryBtn);
 		menuSaleSummaryBtn.click();
 	}
+	
 
 	public void menuEndOfDayBtnClick() {
 		elementClick(menuEndOfDayBtn);

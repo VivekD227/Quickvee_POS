@@ -34,57 +34,60 @@ public class testCases_lockPinScreen extends BaseClass {
 
 	@Test(priority = 1)
 	public void DisplayAndTextCheck() throws Exception {
-		try {
-			if (loginpage.progressBarDisplay()) {
-				System.out.println("Waiting for lock screen page.....");
-				Thread.sleep(20000);
-
-			}
-		} catch (Exception e) {
-
-			Assert.assertTrue(lockscreen.quickveeLogoDisplay(), "Quickvee Logo is not displayed");
-
-			String deviceTimeRaw = driver.getDeviceTime();
-			System.out.println("Device Time: " + deviceTimeRaw);
-
-			SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
-			Date parsedDate = inputFormat.parse(deviceTimeRaw.substring(0, 19));
-
-			SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm a");
-			timeFormat.setTimeZone(TimeZone.getDefault());
-			String formattedDeviceTime = timeFormat.format(parsedDate);
-
-			SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
-			dateFormat.setTimeZone(TimeZone.getDefault());
-			String formattedDeviceDate = dateFormat.format(parsedDate);
-
-			String appTime = lockscreen.getTime();
-			String appDate = lockscreen.getDate();
-
-			System.out.println("App Time: " + appTime);
-			System.out.println("Device Time: " + formattedDeviceTime);
-			System.out.println("App Date: " + appDate);
-			System.out.println("Device Date: " + formattedDeviceDate);
-
-			Assert.assertEquals(appTime.toUpperCase(), formattedDeviceTime.toUpperCase(),
-					"App time does not match device time!");
-			Assert.assertEquals(appDate, formattedDeviceDate, "App date does not match device date!");
-			Assert.assertTrue(lockscreen.quickveeSupportDisplay(), "Call support Text is not displayed");
-			Assert.assertEquals(lockscreen.callMeSupportText(), "CALL ME FOR SUPPORT");
-			Assert.assertTrue(lockscreen.callLogoDisplay(), "Call logo is not displayed");
-
-			Assert.assertEquals(lockscreen.enterPasscodeText(), "Enter Your Passcode");
-			Assert.assertTrue(lockscreen.passcodeDisplay(), "Pin Display not visible");
-			Assert.assertEquals(lockscreen.passcodeHintText(), "Enter your 4-digit passcode.");
-
+		// boolean pBar = true;
+		try{
+		if (loginpage.progressBarDisplay()) {
+			System.out.println("Waiting for lock screen page.....");
+			Thread.sleep(20000);
 		}
+		}
+		catch (Exception e) {
+			System.out.println("Error: "+e.getMessage());
+		}
+		
+		
+		Assert.assertTrue(lockscreen.quickveeLogoDisplay(), "Quickvee Logo is not displayed");
+
+		String deviceTimeRaw = driver.getDeviceTime();
+		System.out.println("Device Time: " + deviceTimeRaw);
+
+		SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+		Date parsedDate = inputFormat.parse(deviceTimeRaw.substring(0, 19));
+
+		SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm a");
+		timeFormat.setTimeZone(TimeZone.getDefault());
+		String formattedDeviceTime = timeFormat.format(parsedDate);
+
+		SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+		dateFormat.setTimeZone(TimeZone.getDefault());
+		String formattedDeviceDate = dateFormat.format(parsedDate);
+
+		String appTime = lockscreen.getTime();
+		String appDate = lockscreen.getDate();
+
+		System.out.println("App Time: " + appTime);
+		System.out.println("Device Time: " + formattedDeviceTime);
+		System.out.println("App Date: " + appDate);
+		System.out.println("Device Date: " + formattedDeviceDate);
+
+		Assert.assertEquals(appTime.toUpperCase(), formattedDeviceTime.toUpperCase(),
+				"App time does not match device time!");
+		Assert.assertEquals(appDate, formattedDeviceDate, "App date does not match device date!");
+		Assert.assertTrue(lockscreen.quickveeSupportDisplay(), "Call support Text is not displayed");
+		Assert.assertEquals(lockscreen.callMeSupportText(), "CALL ME FOR SUPPORT");
+		Assert.assertTrue(lockscreen.callLogoDisplay(), "Call logo is not displayed");
+
+		Assert.assertEquals(lockscreen.enterPasscodeText(), "Enter Your Passcode");
+		Assert.assertTrue(lockscreen.passcodeDisplay(), "Pin Display not visible");
+		Assert.assertEquals(lockscreen.passcodeHintText(), "Enter your 4-digit passcode.");
+
 	}
 
 	@Test(priority = 2)
 	public void validateRefreshButton() throws Exception {
 		// Ensure refresh button is displayed
 		Assert.assertTrue(lockscreen.isRefreshDisplayed(), "Refresh button not displayed");
-		
+
 		// Get old time before refresh
 		String oldTime = driver.getDeviceTime();
 		System.out.println("Old Time: " + oldTime);
@@ -128,28 +131,28 @@ public class testCases_lockPinScreen extends BaseClass {
 		// Validate app is back on lock screen
 		Assert.assertTrue(lockscreen.passcodeDisplay(), "We are not in a logout page");
 	}
-	
+
 	@Test(priority = 4)
 	public void invalidPin() {
-		
+
 		lockscreen.enterPasscode("5874");
 		Assert.assertTrue(lockscreen.passcodeDisplay(), "We are not in a logout page");
 
 	}
-	
+
 	@Test(priority = 4)
 	public void validPin() {
-		
+
 		lockscreen.enterPasscode("1111");
 		Assert.assertTrue(homescreen.storeNameDisplay(), "Not in a home page");
 		Assert.assertTrue(homescreen.employeeNameDisplay(), "Not in a home page");
-		
+
 		String empname = p.getProperty("EmpName").trim();
 		String storename = p.getProperty("StoreName").trim();
-		
+
 		Assert.assertEquals(homescreen.storeNameText(), storename, "Store Name Miss Match");
 		Assert.assertEquals(homescreen.employeeName().trim(), empname, "Employee Name Miss Match");
 
 	}
-	
+
 }

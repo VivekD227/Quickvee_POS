@@ -24,6 +24,7 @@ public class BaseClass {
 	public AndroidDriver driver;
 	public AppiumDriverLocalService service;
 	public Properties p;
+
 	@BeforeClass
 	public void SetUp() throws URISyntaxException, IOException {
 		
@@ -50,13 +51,14 @@ public class BaseClass {
 	
 	
 	@AfterClass(alwaysRun = true)
-	public void tearDown() {
+	public void tearDown() throws InterruptedException {
 	    if (driver != null) {
 	        try {
 	            driver.terminateApp("com.apprication.quickveemanager.dev"); // close app explicitly
 	        } catch (Exception e) {
 	            System.out.println("App already closed: " + e.getMessage());
 	        }
+	        Thread.sleep(2000);
 	        driver.quit();  // end Appium session
 	    }
 	    if (service != null) {

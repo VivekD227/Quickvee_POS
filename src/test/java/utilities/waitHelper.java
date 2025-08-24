@@ -3,15 +3,16 @@ package utilities;
 
 import java.time.Duration;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.appium.java_client.android.AndroidDriver;
+
 public class waitHelper {
 
-	public WebDriver driver;
-	  public waitHelper(WebDriver driver) {
+	public AndroidDriver driver;
+	  public waitHelper(AndroidDriver driver) {
 	        this.driver = driver;
 	    }
 	public void visiblityOfElement(WebElement element) {

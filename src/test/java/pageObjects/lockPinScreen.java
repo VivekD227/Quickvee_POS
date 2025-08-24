@@ -1,10 +1,14 @@
 package pageObjects;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -133,11 +137,12 @@ public class lockPinScreen extends waitHelper {
 	}
 	
 	public void clickDigit(String digit) {
-		WebElement btn = driver.findElement(By.xpath(
-				"//android.widget.TextView[@resource-id='com.apprication.quickveemanager.dev:id/tvNumber' and @text='"
-						+ digit + "']"));
-		btn.click();
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    String xpath = "//android.widget.TextView[@resource-id='com.apprication.quickveemanager.dev:id/tvNumber' and @text='" + digit + "']";
+	    WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+	    element.click();
 	}
+
 
 	public void enterPasscode(String passcode) {
 		for (char digit : passcode.toCharArray()) {
