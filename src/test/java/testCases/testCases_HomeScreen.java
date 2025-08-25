@@ -40,10 +40,13 @@ public class testCases_HomeScreen extends BaseClass {
 
 		Assert.assertTrue(homescreen.callSupportBtnDisplay(), "Call support button is not displayed");
 
-		// String callText = "CALL ME FOR SUPPORT";
-		// System.out.println(homescreen.callSupportBtnText());
-		// Assert.assertEquals(homescreen.callSupportBtnText(), callText, "Different
-		// call support name found");
+		String callText = "CALL ME FOR SUPPORT";
+		String actual = homescreen.callSupportBtnText();
+		
+		callText= callText.replace("\\s+", " ").trim();	
+		actual   = actual.replaceAll("\\s+", " ").trim();
+		Assert.assertEquals(actual, callText, "Call button text mismatch!");
+
 		Assert.assertTrue(homescreen.storeNameDisplay(), "Store Name is not displayed");
 		Assert.assertTrue(homescreen.employeeNameDisplay(), "Employee Name is not displayed");
 

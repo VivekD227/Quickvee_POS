@@ -1,6 +1,7 @@
 package pageObjects;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -40,6 +41,21 @@ public class EndofDayScreen extends waitHelper {
 	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/rvPasscode")
 	private WebElement pinDial;
 	
+	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/ivShiftClosing")
+	private WebElement closeShiftLogo;
+	
+	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/tvEmployeeName")
+	private WebElement empName;
+	
+	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/tvShiftOpenLabel")
+	private WebElement shiftCloseLabel;
+	
+	@AndroidFindBy(xpath = "(//android.widget.TextView[@resource-id=\"com.apprication.quickveemanager.dev:id/tvName\"])[1]")
+	private WebElement alreadyOpenShift;
+	
+	@AndroidFindBy(id = "com.apprication.quickveemanager.dev:id/buttonOk")
+	private WebElement OKBtn;
+	
 	public String getpasscodeText() {
 		return passcodeText.getText();
 	}
@@ -75,6 +91,49 @@ public class EndofDayScreen extends waitHelper {
 	public boolean pinDialDisplay() {
 		return pinDial.isDisplayed();
 	}
+	
+	public boolean closeShiftLogoDisplay() {
+		return closeShiftLogo.isDisplayed();
+	}
+	
+	public boolean empNameDisplay() {
+		return empName.isDisplayed();
+	}
+	
+	public String getempName() {
+		return empName.getText();
+	}
+	
+	public boolean shiftCloseLabelDisplay() {
+		return shiftCloseLabel.isDisplayed();
+	}
+	
+	public String getShiftCloseLabel() {
+		return shiftCloseLabel.getText();
+	}
+	
+	public boolean alreadyOpenShiftDisplay() {
+		return alreadyOpenShift.isDisplayed();
+	}
+	
+	public boolean OKBtnDisplay() {
+		return OKBtn.isDisplayed();
+	}
+	
+	public void OKBtnClick() {
+		OKBtn.click();
+	}
+	
+	public int deviceLoginCount() {
+	    List<WebElement> elements = driver.findElements(
+	        By.xpath("//android.widget.TextView[@resource-id='com.apprication.quickveemanager.dev:id/tvName']")
+	    );
+	    int count = elements.size();
+	    return count;
+	}
+	
+	
+
 	public void clickDigit(String digit) {
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	    String xpath = "(//android.view.ViewGroup[@resource-id=\'com.apprication.quickveemanager.dev:id/numberLayout\"])[" + digit +"']";
@@ -82,7 +141,7 @@ public class EndofDayScreen extends waitHelper {
 	    WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
 	    element.click();
 	}
-
+	
 
 	public void enterPasscode(String passcode) {
 		for (char digit : passcode.toCharArray()) {

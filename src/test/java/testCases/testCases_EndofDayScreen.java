@@ -9,7 +9,7 @@ import pageObjects.homeScreen;
 import pageObjects.lockPinScreen;
 import utilities.BaseClass;
 
-public class testCases_EndofDayScreen extends BaseClass{
+public class testCases_EndofDayScreen extends BaseClass {
 
 	lockPinScreen lockscreen;
 	homeScreen homescreen;
@@ -21,27 +21,67 @@ public class testCases_EndofDayScreen extends BaseClass{
 		homescreen = new homeScreen(driver);
 		endofday = new EndofDayScreen(driver);
 	}
-	
+
 	@Test(priority = 1)
 	public void checkUI() {
-		
+
 		lockscreen.enterPasscode("1111");
 		Assert.assertTrue(homescreen.storeNameDisplay(), "Not in a home page");
-		
+
 		homescreen.menuBtnClick();
 		homescreen.menuEndOfDayBtnClick();
-		
+
 		Assert.assertTrue(endofday.quickveeLogoDisplay(), "Quickvee Logo not displayed");
 		Assert.assertTrue(endofday.storeNameDisplay(), "Store Name is not displayed");
-		
+
 		String storeName = p.getProperty("StoreName");
-		Assert.assertEquals(endofday.getstoreName(), storeName, "Store is changed to "+endofday.getstoreName());
+		Assert.assertEquals(endofday.getstoreName(), storeName, "Store is changed to " + endofday.getstoreName());
 		Assert.assertTrue(endofday.passcodeTextDisplay(), "Please Enter Passcode is not Displayed");
-		Assert.assertEquals(endofday.getpasscodeText(), "Please Enter Passcode", "Please Enter Passcode text is not displayed");
-		
+		Assert.assertEquals(endofday.getpasscodeText(), "Please Enter Passcode",
+				"Please Enter Passcode text is not displayed");
+
 		Assert.assertTrue(endofday.pinLayoutDisplay(), "Pin layout is not displayed");
 		Assert.assertTrue(endofday.pinDialDisplay(), "Pin Dial is not displayed");
 
-	
+	}
+
+	@Test(priority = 2)
+	public void invalidPin() throws InterruptedException {
+
+		endofday.enterPasscode("5874");
+		Thread.sleep(5000);
+		Assert.assertTrue(endofday.passcodeTextDisplay(), "We are not in a End of Day Screen page");
+
+	}
+
+	@Test(priority = 3)
+	public void validPin() throws InterruptedException {
+
+		lockscreen.enterPasscode("1111");
+		Thread.sleep(5000);
+		
+		Assert.assertTrue(endofday.closeShiftLogoDisplay(), "The Close shift logo is not displayed");
+		Assert.assertTrue(endofday.empNameDisplay(), "Employee name is not displayed");
+		String eName = p.getProperty("EmpName");
+		Assert.assertEquals(endofday.getempName().trim(), eName, "Employee Name is not match");
+		
+		Assert.assertTrue(endofday.shiftCloseLabelDisplay(), "Unable to close shift is not dispalyed");
+		
+		String unableCloseShift = "Unable to complete end-of-day process\nPlease ensure all open shifts are closed.";
+		String actual = endofday.getShiftCloseLabel();
+		
+		unableCloseShift= unableCloseShift.replace("\\s+", " ").trim();	
+		actual = actual.replaceAll("\\s+", " ").trim();
+
+		Assert.assertEquals(unableCloseShift, actual, "Unable to close shift text mix match");
+		
+		Assert.assertTrue(endofday.alreadyOpenShiftDisplay(), "No open shift");
+		
+		System.out.println("Open Shift count is: "+endofday.deviceLoginCount());
+		endofday.OKBtnClick();
+		
+		Assert.assertTrue(homescreen.storeNameDisplay(), "Not in home screen");
+
+
 	}
 }

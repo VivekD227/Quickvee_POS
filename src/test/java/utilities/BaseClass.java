@@ -30,7 +30,7 @@ public class BaseClass {
 		
 		service = new AppiumServiceBuilder()
 				.withAppiumJS(new File(
-						"C:\\Users\\Apprication\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+						"C:\\Users\\Priya Mishra\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
 				.withIPAddress("127.0.0.1").usingPort(4723).build();
 		service.start();
 
