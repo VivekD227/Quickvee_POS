@@ -1,45 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-24T09:34:21 GMT-07:00" name="Default suite" finished-at="2025-08-24T09:35:07 GMT-07:00" duration-ms="45348">
+  <suite started-at="2025-08-25T16:41:55 IST" name="Default suite" finished-at="2025-08-25T16:42:40 IST" duration-ms="44870">
     <groups>
     </groups>
-    <test started-at="2025-08-24T09:34:21 GMT-07:00" name="Default test" finished-at="2025-08-24T09:35:07 GMT-07:00" duration-ms="45348">
-      <class name="testCases.testCases_HomeScreen">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:testCases.testCases_HomeScreen@229f66ed]" started-at="2025-08-24T09:34:21 GMT-07:00" name="SetUp" finished-at="2025-08-24T09:34:26 GMT-07:00" duration-ms="4904" status="PASS">
+    <test started-at="2025-08-25T16:41:55 IST" name="Default test" finished-at="2025-08-25T16:42:40 IST" duration-ms="44870">
+      <class name="testCases.testCases_lockPinScreen">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:testCases.testCases_lockPinScreen@662ac478]" started-at="2025-08-25T16:41:55 IST" name="SetUp" finished-at="2025-08-25T16:42:01 IST" duration-ms="6129" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method is-config="true" signature="initPage()[pri:0, instance:testCases.testCases_HomeScreen@229f66ed]" started-at="2025-08-24T09:34:26 GMT-07:00" name="initPage" finished-at="2025-08-24T09:34:27 GMT-07:00" duration-ms="942" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:testCases.testCases_lockPinScreen@662ac478]" started-at="2025-08-25T16:42:01 IST" name="init" finished-at="2025-08-25T16:42:02 IST" duration-ms="571" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initPage -->
-        <test-method signature="checkUI()[pri:1, instance:testCases.testCases_HomeScreen@229f66ed]" started-at="2025-08-24T09:34:27 GMT-07:00" name="checkUI" finished-at="2025-08-24T09:34:39 GMT-07:00" duration-ms="11897" status="PASS">
+        </test-method> <!-- init -->
+        <test-method signature="DisplayAndTextCheck()[pri:1, instance:testCases.testCases_lockPinScreen@662ac478]" started-at="2025-08-25T16:42:02 IST" name="DisplayAndTextCheck" finished-at="2025-08-25T16:42:11 IST" duration-ms="9905" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkUI -->
-        <test-method is-config="true" signature="initPage()[pri:0, instance:testCases.testCases_HomeScreen@229f66ed]" started-at="2025-08-24T09:34:39 GMT-07:00" name="initPage" finished-at="2025-08-24T09:34:39 GMT-07:00" duration-ms="201" status="PASS">
+        </test-method> <!-- DisplayAndTextCheck -->
+        <test-method is-config="true" signature="init()[pri:0, instance:testCases.testCases_lockPinScreen@662ac478]" started-at="2025-08-25T16:42:11 IST" name="init" finished-at="2025-08-25T16:42:11 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initPage -->
-        <test-method signature="menuClick()[pri:2, instance:testCases.testCases_HomeScreen@229f66ed]" started-at="2025-08-24T09:34:39 GMT-07:00" name="menuClick" finished-at="2025-08-24T09:34:51 GMT-07:00" duration-ms="11853" status="PASS">
+        </test-method> <!-- init -->
+        <test-method signature="validateRefreshButton()[pri:2, instance:testCases.testCases_lockPinScreen@662ac478]" started-at="2025-08-25T16:42:11 IST" name="validateRefreshButton" finished-at="2025-08-25T16:42:15 IST" duration-ms="3999" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- menuClick -->
-        <test-method is-config="true" signature="initPage()[pri:0, instance:testCases.testCases_HomeScreen@229f66ed]" started-at="2025-08-24T09:34:51 GMT-07:00" name="initPage" finished-at="2025-08-24T09:34:51 GMT-07:00" duration-ms="38" status="PASS">
+        </test-method> <!-- validateRefreshButton -->
+        <test-method is-config="true" signature="init()[pri:0, instance:testCases.testCases_lockPinScreen@662ac478]" started-at="2025-08-25T16:42:15 IST" name="init" finished-at="2025-08-25T16:42:15 IST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initPage -->
-        <test-method signature="callMeClass()[pri:3, instance:testCases.testCases_HomeScreen@229f66ed]" started-at="2025-08-24T09:34:51 GMT-07:00" name="callMeClass" finished-at="2025-08-24T09:35:03 GMT-07:00" duration-ms="11967" status="PASS">
+        </test-method> <!-- init -->
+        <test-method signature="logoutAndCallBtn()[pri:3, instance:testCases.testCases_lockPinScreen@662ac478]" started-at="2025-08-25T16:42:15 IST" name="logoutAndCallBtn" finished-at="2025-08-25T16:42:28 IST" duration-ms="12437" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- callMeClass -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.testCases_HomeScreen@229f66ed]" started-at="2025-08-24T09:35:03 GMT-07:00" name="tearDown" finished-at="2025-08-24T09:35:07 GMT-07:00" duration-ms="3463" status="PASS">
+        </test-method> <!-- logoutAndCallBtn -->
+        <test-method is-config="true" signature="init()[pri:0, instance:testCases.testCases_lockPinScreen@662ac478]" started-at="2025-08-25T16:42:28 IST" name="init" finished-at="2025-08-25T16:42:28 IST" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="invalidPin()[pri:4, instance:testCases.testCases_lockPinScreen@662ac478]" started-at="2025-08-25T16:42:28 IST" name="invalidPin" finished-at="2025-08-25T16:42:32 IST" duration-ms="4099" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidPin -->
+        <test-method is-config="true" signature="init()[pri:0, instance:testCases.testCases_lockPinScreen@662ac478]" started-at="2025-08-25T16:42:32 IST" name="init" finished-at="2025-08-25T16:42:32 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="validPin()[pri:4, instance:testCases.testCases_lockPinScreen@662ac478]" started-at="2025-08-25T16:42:32 IST" name="validPin" finished-at="2025-08-25T16:42:36 IST" duration-ms="4370" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validPin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.testCases_lockPinScreen@662ac478]" started-at="2025-08-25T16:42:36 IST" name="tearDown" finished-at="2025-08-25T16:42:40 IST" duration-ms="3178" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.testCases_HomeScreen -->
+      </class> <!-- testCases.testCases_lockPinScreen -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

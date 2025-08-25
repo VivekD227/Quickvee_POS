@@ -136,22 +136,22 @@ public class GmailReader {
         return null;
     }
 
-    private static String getTextFromEmail(Message message) throws Exception {
-        if (message.isMimeType("text/plain")) {
-            return message.getContent().toString();
-        } else if (message.isMimeType("multipart/*")) {
-            Multipart multipart = (Multipart) message.getContent();
-            for (int i = 0; i < multipart.getCount(); i++) {
-                BodyPart part = multipart.getBodyPart(i);
-                if (part.isMimeType("text/plain")) {
-                    return part.getContent().toString();
-                } else if (part.isMimeType("text/html")) {
-                    String html = (String) part.getContent();
-                    return html.replaceAll("\\<.*?\\>", ""); // strip HTML tags
-                }
-            }
-        }
-        return "";
-    }
+//    private static String getTextFromEmail(Message message) throws Exception {
+//        if (message.isMimeType("text/plain")) {
+//            return message.getContent().toString();
+//        } else if (message.isMimeType("multipart/*")) {
+//            Multipart multipart = (Multipart) message.getContent();
+//            for (int i = 0; i < multipart.getCount(); i++) {
+//                BodyPart part = multipart.getBodyPart(i);
+//                if (part.isMimeType("text/plain")) {
+//                    return part.getContent().toString();
+//                } else if (part.isMimeType("text/html")) {
+//                    String html = (String) part.getContent();
+//                    return html.replaceAll("\\<.*?\\>", ""); // strip HTML tags
+//                }
+//            }
+//        }
+//        return "";
+//    }
 
 }

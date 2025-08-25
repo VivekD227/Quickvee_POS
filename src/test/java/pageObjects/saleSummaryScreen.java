@@ -23,4 +23,6 @@ public class saleSummaryScreen extends waitHelper {
 	public boolean saleSummaryDisplay() {
 		return saleSummaryTitle.isDisplayed();
 	}
+	
+	
 }
